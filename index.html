@@ -1,0 +1,77 @@
+<!-- Template: http://getbootstrap.com/examples/cover/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Search</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+  <!-- Custom styles for this template -->
+  <link href="./css/main.css" rel="stylesheet">
+
+  <!-- api gateway generated sdk -->
+  <script src="./apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+  <script src="./apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+  <script src="./apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+  <script src="./apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+  <script src="./apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+  <script src="./apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+  <script src="./apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+  <script src="./apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+  <script src="./apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+  <script src="./apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+
+  <script src="./apiGateway-js-sdk/apigClient.js"></script>
+
+  <script src="./js/aws-sdk.min.js"></script>
+
+</head>
+
+<script>
+  const sdk = apigClientFactory.newClient({});
+</script>
+
+<body>
+
+  <div class="container">
+    <div class="row search-area">
+      <div class="col-4">
+        <input class="form-control mr-sm-2" id="input-buffer" type="search" placeholder="Search" aria-label="Search" x-webkit-speech>
+        <div class="warning-input" id="input-warning"></div>
+        <button class="btn btn-info my-2 my-sm-0" id="search-btn">Search</button>
+        <button class="btn btn-info my-2 my-sm-0" id="voice-btn">Start Voice</button>
+        <br>
+        <br>
+        <label class="form-label" for="customFile">Upload Image</label>
+        <input type="file" id="customFile" />
+        <input class="form-control my-2 mr-sm-2" id="label-buffer" type="search" placeholder="Custom Labels" aria-label="Search" x-webkit-speech>
+        <button class="btn btn-info my-2 my-sm-0" id="upload-btn">Upload</button>
+      </div>
+      <div class="col-8">
+        <div class="row" id="picture"></div>
+      </div>
+    </div>
+
+    <br>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="./js/bootstrap.min.js"></script> -->
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!-- <script src="./js/ie10-viewport-bug-workaround.js"></script> -->
+  <!-- custom scroll bar -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
+  <!-- chat js -->
+  <script src="./js/photo.js"></script>
+</body>
+
+</html>
