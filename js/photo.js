@@ -70,7 +70,9 @@ function Dictation() {
       recognition.stop();
       generate_voice_btn();
     };
+    console.log("finish lisening");
     recognition.onerror = function (e) {
+      console.log("dicatation error!",e);
       recognition.stop();
       // generate_voice_btn()
     };
